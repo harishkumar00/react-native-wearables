@@ -1,5 +1,6 @@
 {
   "name": "react-native-wearables",
+  "private": true,
   "version": "0.1.0",
   "description": "react-native-wearables",
   "source": "./src/index.tsx",
