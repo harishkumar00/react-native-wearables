@@ -17,6 +17,21 @@ const Wearables = NativeModules.Wearables
       }
     );
 
-export function multiply(a: number, b: number): Promise<number> {
-  return Wearables.multiply(a, b);
+export function isWatchPaired(): Promise<boolean> {
+  return Wearables.getIsPaired();
+}
+
+export function isWatchAppInstalled(): Promise<boolean> {
+  return Wearables.getIsWatchAppInstalled();
+}
+
+export function sendMessage(message: string): Promise<any> {
+  return Wearables.sendMessage(message);
+}
+
+export function sendMessageData(
+  message: string,
+  encoding: number
+): Promise<any> {
+  return Wearables.sendMessageData(message, encoding);
 }
