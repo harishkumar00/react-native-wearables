@@ -17,14 +17,14 @@ const Wearables = NativeModules.Wearables
       }
     );
 
-async function isWatchPaired(): Promise<any> {
+export async function isWatchPaired(): Promise<any> {
   return await Wearables.getIsPaired();
 }
 
-async function isWatchAppInstalled(): Promise<any> {
+export async function isWatchAppInstalled(): Promise<any> {
   return await Wearables.getIsWatchAppInstalled();
 }
 
-async function sendMessage(message: Record<string, any>): Promise<any> {
+export async function sendMessage(message: Record<string, any>): Promise<any> {
   return await Wearables.sendMessage(message);
 }
